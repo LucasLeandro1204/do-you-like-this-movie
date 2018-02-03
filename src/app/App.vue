@@ -1,10 +1,23 @@
 <template>
-
+  <div>
+    {{ total }}
+    <button @click.prevent="$bus.send('add')">add</button>
+  </div>
 </template>
 
 <script>
   export default {
+    listen: {
+      add () {
+        this.total++;
+      },
+    },
 
+    data () {
+      return {
+        total: 0,
+      };
+    },
   };
 </script>
 
