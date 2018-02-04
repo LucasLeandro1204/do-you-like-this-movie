@@ -194,6 +194,7 @@ module.exports = {
 
   fonts: {
     'sans': [
+      'Poppins',
       'system-ui',
       'BlinkMacSystemFont',
       '-apple-system',

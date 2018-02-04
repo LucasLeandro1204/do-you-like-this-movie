@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="font-sans">
     {{ total }}
     <button @click.prevent="$bus('add')">add</button>
   </div>
