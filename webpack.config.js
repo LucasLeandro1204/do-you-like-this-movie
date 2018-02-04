@@ -73,6 +73,7 @@ module.exports = {
   resolve: {
     alias: {
       'core': path.resolve(__dirname, 'src/app/core'),
+      'app': path.resolve(__dirname, 'src/app/components'),
     },
     extensions: ['*', '.js', '.vue', '.json']
   },
