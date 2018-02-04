@@ -1,7 +1,7 @@
 <template>
   <div>
     {{ total }}
-    <button @click.prevent="$bus.send('add')">add</button>
+    <button @click.prevent="$bus('add')">add</button>
   </div>
 </template>
 

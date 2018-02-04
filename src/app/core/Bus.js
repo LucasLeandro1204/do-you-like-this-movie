@@ -23,8 +23,8 @@ const bus = new Bus(new Vue());
 Vue.use({
   install (vue) {
     Object.defineProperty(vue.prototype, '$bus', {
-      get() {
-        return bus;
+      get () {
+        return bus.send.bind(bus);
       }
     });
 
@@ -37,14 +37,14 @@ Vue.use({
         }
 
         Object.keys(listen)
-          .forEach(event => this.$bus.on(event, listen[event].bind(this)));
+          .forEach(event => bus.on(event, listen[event].bind(this)));
       },
 
       destroyed () {
         const listen = this.$options.listen;
 
         Object.keys(listen)
-          .forEach(event => this.$bus.off(event, listen[event].bind(this)));
+          .forEach(event => bus.off(event, listen[event].bind(this)));
       },
     });
   },
