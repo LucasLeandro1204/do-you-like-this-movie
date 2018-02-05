@@ -1,6 +1,6 @@
 <template>
   <button @click.prevent="toggle">
-    <svg class="fill-current text-grey-darker" width="32" height="24" viewBox="0 0 32 24" preserveAspectRatio="xMidYMid meet">
+    <svg class="fill-current text-grey-dark" width="32" height="24" viewBox="0 0 32 24" preserveAspectRatio="xMidYMid meet">
       <rect width="32" height="4" rx="5" ry="5" />
       <rect y="8" width="24" height="4" rx="5" ry="5" />
       <rect y="16" width="16" height="4" rx="5" ry="5" />
