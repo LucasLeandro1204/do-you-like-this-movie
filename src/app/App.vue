@@ -1,12 +1,21 @@
 <template>
-  <div class="font-sans">
-    {{ total }}
-    <button @click.prevent="$bus('add')">add</button>
+  <div class="p-6">
+    <navbar />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
+  import router from 'core/Router';
+  import Navbar from 'app/Navbar.vue';
+
   export default {
+    router,
+
+    components: {
+      Navbar,
+    },
+
     listen: {
       add () {
         this.total++;
