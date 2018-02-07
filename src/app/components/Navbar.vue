@@ -8,13 +8,13 @@
       <nav class="pin fixed bg-white flex justify-center items-center" v-show="open">
         <ul class="list-reset font-semibold text-xl text-center w-64">
           <li class="my-4 bg-grey-darkest">
-            <router-link class="block py-3 no-underline text-white" to="/">FIND</router-link>
+            <router-link class="block py-3 no-underline text-white" exact-active-class="bg-blue" :to="{ name: 'index' }">DISCOVER</router-link>
           </li>
           <li class="my-4 bg-grey-darkest">
-            <router-link class="block py-3 no-underline text-white" to="/">LIKED</router-link>
+            <router-link class="block py-3 no-underline text-white" exact-active-class="bg-green" to="/">LIKED</router-link>
           </li>
           <li class="my-4 bg-grey-darkest">
-            <router-link class="block py-3 no-underline text-white" to="/">DISLIKED</router-link>
+            <router-link class="block py-3 no-underline text-white" exact-active-class="bg-red" to="/">DISLIKED</router-link>
           </li>
         </ul>
       </nav>
