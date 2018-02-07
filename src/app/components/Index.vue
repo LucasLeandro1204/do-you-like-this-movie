@@ -1,29 +1,24 @@
 <template>
-  <section>
-    <div class="bg-center bg-cover" :style="{ backgroundImage }">
-      <div class="w-full h-64" :style="{ background: gradient }"></div>
+  <article class="min-h-screen flex flex-col">
+    <movie background-url="http://lorempixel.com/output/sports-q-c-640-480-2.jpg"></movie>
+    <div class="flex px-6 mt-auto">
+      <reaction type="like"/>
+      <reaction class="ml-auto" type="dislike"/>
     </div>
-
-  </section>
+    <button class="rounded-full mb-6 py-1 px-4 border border-solid self-center border-grey-light text-grey-light">
+      SKIP
+    </button>
+  </article>
 </template>
 
 <script>
+  import Movie from 'app/Movie.vue';
+  import Reaction from 'app/Reaction.vue';
+
   export default {
-    props: {
-      backgroundUrl: {
-        type: String,
-        default: 'http://lorempixel.com/output/sports-q-c-640-480-2.jpg',
-      },
-    },
-
-    computed: {
-      backgroundImage () {
-        return 'url(' + this.backgroundUrl + ')';
-      },
-
-      gradient () {
-        return 'linear-gradient(to top, rgb(221, 94, 137), rgba(255, 255, 255, .5))';
-      },
+    components: {
+      Movie,
+      Reaction,
     },
   };
 </script>

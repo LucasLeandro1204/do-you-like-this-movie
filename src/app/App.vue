@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="font-sans">
     <navbar />
-    <router-view></router-view>
+    <router-view />
   </div>
 </template>
 
@@ -73,6 +73,12 @@
  * See: https://github.com/tailwindcss/tailwindcss/issues/53#issuecomment-341413622
  */
 @tailwind utilities;
+
+.pin-center {
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
 
 /**
  * Here you would add any custom utilities you need that don't come out of the

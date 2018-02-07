@@ -5,7 +5,7 @@
     </div>
 
     <fade>
-      <nav class="pin fixed flex justify-center items-center" v-show="open">
+      <nav class="pin fixed flex justify-center items-center z-40" v-show="open">
         <ul class="list-reset font-semibold text-xl text-center w-64">
           <li class="my-4 bg-grey-darkest">
             <router-link class="block py-3 no-underline text-white" exact-active-class="bg-blue" :to="{ name: 'index' }">DISCOVER</router-link>
