@@ -37,7 +37,7 @@
       },
 
       size () {
-        return this.small ? 'w-8 h-8 text-base' : 'w-16 h-16 text-3xl';
+        return this.small ? 'w-8 h-8 text-base' : 'w-24 h-24 text-4xl';
       },
 
       icon () {
